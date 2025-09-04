@@ -1,4 +1,4 @@
-# Example Publisher (CoinGecko → Lazer Agent JSON-RPC)
+# Example Publisher (CoinGecko → Lazer)
 
 This is a minimal example that:
 - polls CoinGecko prices,
