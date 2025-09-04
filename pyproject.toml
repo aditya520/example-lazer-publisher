@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "example-lazer-publisher"
+version = "0.1.0"
+description = "Pyth example publisher for Lazer Agent"
+authors = ["Aditya Arora <aditya@pyth.network>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.9.5"
+websockets = "^12.0"
+pydantic = "^2.7.4"
+toml = "^0.10.2"
+uvicorn = "^0.30.6"
+fastapi = "^0.111.0"
+
+[tool.poetry.scripts]
+publisher = "src.main:run"

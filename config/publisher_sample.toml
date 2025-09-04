@@ -1,0 +1,18 @@
+[publisher]
+# Choose your data source
+provider_engine = "coin_gecko"   # only CG in this sample, but keeps parity with the Python ref publisher
+interval_ms = 2000               # poll frequency for CG
+coingecko_api_key = ""  # CoinGecko API key for demo
+
+# Map human symbols → CoinGecko IDs and Pyth productIds
+# productId is a placeholder string here for docs; swap to your product keys as needed.
+[publisher.markets]
+BTCUSD = { coingecko_id = "bitcoin",  product_id = "BTC/USD",  feed_id = 1 }
+ETHUSD = { coingecko_id = "ethereum", product_id = "ETH/USD", feed_id = 2 }
+
+[agent]
+listen_address = "0.0.0.0:8910"
+bearer_token = ""
+
+[pricing]
+expo = -8                         # 1e-8 precision (Pyth-style)
